@@ -16,8 +16,10 @@ app.get('/', async (req,res) => {
 })
 // Endpoint to handle form submission
 app.post('/submit', async (req, res) => {
+    const {name,password} = req.body;
+    const arr = {name,password}.values(); 
   console.log("success");
-  res.send("from post")
+  res.send("from post ${arr[0]} and ${arr[1]}")
 });
 
 // Start the server
