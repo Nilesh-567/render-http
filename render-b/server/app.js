@@ -21,7 +21,7 @@ app.post('/submit', async (req, res) => {
     const result = {name,password}; 
     const arr = result.values(); 
   console.log("success");
-  res.send(`from post : ${arr}`); 
+  res.send(`from post : ${arr[0]} and ${arr[1]}`); 
 });
 
 // Start the server
