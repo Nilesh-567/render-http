@@ -12,7 +12,7 @@ app.use(cors());
 
 app.get('/', async (req,res) => {
     console.log("final achievement"); 
-    res.send("from get");
+    res.send("from get method");
 })
 // Endpoint to handle form submission
 app.post('/submit', async (req, res) => {
@@ -21,7 +21,7 @@ app.post('/submit', async (req, res) => {
     const result = {name,password}; 
     const arr = result.values(); 
   console.log("success");
-  res.send(`from post : ${arr[0]} and ${arr[1]}`); 
+  res.send(`from post method : ${arr[0]} and ${arr[1]}`); 
 });
 
 // Start the server
