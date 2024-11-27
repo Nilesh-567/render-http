@@ -9,10 +9,19 @@
 <body>
     <h1>Project Records inside clinet-side (connect.html ) </h1>
     <button id="fetchRecords">Fetch Records</button>
-    <pre id="output"></pre>
+    <pre id="output">A</pre><br><br>
+    <pre id="output2">B</pre><br><br>
+    <pre id="output3">C</pre><br><br>
+    <pre id="output4">D</pre><br><br>
+    <pre id="output5">E</pre><br><br>
     <script>
         // Connect to the server
         const socket = io('https://render-http.onrender.com/');
+        const host = window.location.hostname; // Get the current domain
+        document.getElementById('output2').textContent = JSON.stringify(host, null, 2);
+        document.getElementById('output3').textContent = typeof JSON.stringify(host, null, 2);
+        const port = 3002; // WebSocket server port
+        //const socket = io(`http://${host}:${port}`);
 
         // Handle button click to fetch records
         document.getElementById('fetchRecords').addEventListener('click', () => {
