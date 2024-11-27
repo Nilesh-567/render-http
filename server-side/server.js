@@ -34,8 +34,8 @@ const __dirname = path.dirname(__filename);
 app.get('/', async (req, res) => {
   try {
     // Fetch the HTML from Netlify
-    const B_URL = 'https://mongodb-fetch-data.netlify.app'; 
-    const response = await axios.get(process.env.B_URL || B_URL);
+    const BASE_URL = 'https://mongodb-fetch-data.netlify.app'; 
+    const response = await axios.get(process.env.B_URL);
     res.send(response.data); // Send the HTML to the client
   } catch (error) {
     console.error('Error fetching HTML:', error);
