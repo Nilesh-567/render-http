@@ -8,8 +8,8 @@ const url =  process.env.DB_URL || "mongodb://localhost:27017/";
 async function checkConnection() {
     try {
 const client = new MongoClient(url);
-const db = await client.db("Vercel");
-const collection = db.collection("projects");  
+const db = await client.db(process.env.DB_NAME || "Vercel");
+const collection = db.collection(process.env.COLLECTION_NAME || "projects");  
 
 return {client,db,collection}; 
     }
