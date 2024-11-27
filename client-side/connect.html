@@ -21,7 +21,7 @@
         document.getElementById('output2').textContent = JSON.stringify(host, null, 2);
         document.getElementById('output3').textContent = typeof JSON.stringify(host, null, 2);
         const port = 3002; // WebSocket server port
-        const socket = io(`http://${host}:${port}`);
+        const socket = io(`http://${host}:${port}/`);
 
         // Handle button click to fetch records
         document.getElementById('fetchRecords').addEventListener('click', () => {
